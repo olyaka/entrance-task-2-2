@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial-BoldMT", sans-serif;
+    color: #333333;
+}
+
+header {
+    border-bottom: 1px solid #F0F0F0;
+}
+.menu-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    margin: 30px;
+}
+
+.menu-container a {
+    margin-right: 20px;
+    margin-top: 38px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-bg {
+    width: 630px;
+    height: 331px;
+}
+
+.main-content {
+    position: relative;
+    margin: 30px;
+    margin-top: 20px;
+    height: 331px;
+}
+
+.main-content .text {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.main-container h1, .fav-devices h1 {
+    font-size: 18px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.text p {
+    font-size: 14px;
+    font-family: "Arial-MT", sans-serif;
+}
+
+.text h1 {
+    font-size: 27px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.temp {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 110px;
+    margin-left: 30px;
+}
+
+.temp img {
+    width: 26px;
+    height: 26px;
+    margin-top: 25px;
+}
+
+.temp h1 {
+    margin: 0px;
+    font-size: 36px;
+}
+
+.temp p {
+    font-family: "ArialMT", sans-serif;
+    font-size: 14px;
+    color: #858585;
+}
+
+.temp .info + .info {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.devices-overview {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    right: 0;
+    width: 200px;
+    margin-top: 20px;
+    margin-right: 20px;
+    overflow-y: auto;
+    height: calc(100% - 20px);
+}
+
+.device, .script {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 200px;
+    height: 120px; 
+    background: #F7F7F7;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    flex: none;
+}
+
+.script, .fav-container .device {
+    margin-right: 20px;
+}
+
+.device:last-child {
+    margin-bottom: 40px;
+}
+
+.device h1, .script h1 {
+    font-size: 14px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 0;
+}
+
+.device p, .script p {
+    font-family: "ArialMT", sans-serif;
+    font-size: 12px;
+    color: #858585;
+    letter-spacing: 0;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.device img, .script img {
+    position: absolute;
+    top: 0;
+    margin: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.scroll-button {
+    position: absolute;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    width: 200px;
+    background: #F7F7F7; 
+    right: 0;
+    bottom: 0;
+    height: 30px;
+    padding-top: 7px;
+    margin-right: 20px;
+}
+
+.scroll-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.script-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 20px;
+    flex-wrap: wrap;
+}
+
+.fav-container, .filter, footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+    overflow-x: auto;
+}
+
+.fav-container {
+    margin-bottom: 50px;
+}
+
+.category {
+    font-family: "Arial-BoldMT", sans-serif;
+    font-size: 13px;
+    color: #000000;
+    text-align: left;
+    background: #F7F7F7;
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: 22px;
+    min-width: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.category:hover {
+    background: #FFD93E;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    background: white;
+    width: 100%;
+    padding: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: "ArialMT", sans-serif;
+    font-size: 12px;
+    color: #858585;
+    letter-spacing: 0.01px;
+    text-align: left;
+    margin: 10px;
+}
+
+footer a:last-child {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+}
