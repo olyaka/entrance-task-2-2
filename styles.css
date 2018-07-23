@@ -193,11 +193,13 @@ header {
     justify-content: flex-start;
     margin-top: 20px;
     margin-left: 20px;
-    overflow-x: auto;
 }
 
 .fav-container {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+    overflow-x: scroll;
+    width: 100%;
+    
 }
 
 .category {
@@ -214,7 +216,7 @@ header {
     text-align: center;
 }
 
-.category:hover {
+.category:hover, .clicked {
     background: #FFD93E;
 }
 
