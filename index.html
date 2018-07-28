@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="menu-container">
-                <div class="logo">
-                    <img src="guide/assets/Яндекс Дом@1x.png">
-                </div>
-                <a href="#main">Сводка</a>
-                <a href="#devices">Устройства</a>
-                <a href="#scripts">Сценарии</a>
+            <div class="logo">
+                <img src="guide/assets/Яндекс Дом@1x.png">
+            </div>
+            <a href="#main">Сводка</a>
+            <a href="#devices">Устройства</a>
+            <a href="#scripts">Сценарии</a>
         </div>
     </header>
     <div class="main-container">
@@ -43,12 +46,12 @@
                         <h1>Philips Cooler</h1>
                         <p>Начнет охлаждать в 16:30</p>
                     </div>
-                    <div class="device bulb">
+                    <div class="device hall bulb">
                         <img src="guide/assets/icon_sun@2x.png">
                         <h1>Xiaomi Yeelight LED Smart Bulb</h1>
                         <p>Включится в 17:00</p>
                     </div>
-                    <div class="device camera">
+                    <div class="device kitchen camera">
                         <img src="guide/assets/icon_sun@2x.png">
                         <h1>D-Link Omna 180 Cam</h1>
                         <p>Включится в 17:00</p>
@@ -68,7 +71,7 @@
                         <h1>Xiaomi Mi Air Purifier 2S</h1>
                         <p>Включено</p>
                     </div>
-                    <div class="device bulb">
+                    <div class="device bulb kitchen">
                         <img src="guide/assets/icon_sun@2x.png">
                         <h1>Philips Zhirui</h1>
                         <p>Выключено</p>
@@ -119,6 +122,11 @@
             <div class="category bulb">Лампочки</div>
             <div class="category camera">Камеры</div>
         </div>
+        <div class="nav-arrows">
+            <img class="arrow-left" src="guide/assets/M Copy@1x.svg"></img>
+            <img class="arrow-right" src="guide/assets/M Copy@1x.svg"></img>
+        </div>
+
         <div class="fav-container">
         </div>
     </div>
@@ -128,9 +136,30 @@
         <a href="#">Обратная связь</a>
         <a href="#">Разработчикам</a>
         <a href="#">Условия использования</a>
-        <a href="#">© 2001–2017  ООО «Яндекс»</a>
+        <a href="#">© 2001–2017 ООО «Яндекс»</a>
     </footer>
-    </footer>
+
+    <template id="pop-up-template">
+        <div class="pop-up">
+            <div class="pop-up-container">
+                <h1 class="name">
+
+                </h1>
+                <div class="state">
+
+                </div>
+                <div class="manager">
+
+                </div>
+            </div>
+            <div class="submit-container">
+                <a class="apply" href="#">Применить</a>
+                <a class="close" href="#">Закрыть</a>
+            </div>
+        </div>
+    </template>
+
     <script src="script.js"></script>
 </body>
+
 </html>
