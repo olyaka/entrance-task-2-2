@@ -47,29 +47,27 @@ document.querySelector(".arrow-right").addEventListener("click", function() {
 
 var template = document.querySelector("#pop-up-template");
 
-function closePopUp() {
+function closePopUp(evt) {
+  evt.stopPropagation();
   document.querySelector(".overlay").style = "display:none";
+  document.querySelector(".device.pop-up-container").classList.remove('pop-up-container');
+  document.querySelector(".device .submit-container").style = "display:none";
 }
 
 document.querySelectorAll(".device").forEach(function(item) {
   item.addEventListener("click", function(evt) {
     document.querySelector(".overlay").style = "display:flex";
 
-    // document
-    //   .querySelector(".overlay")
-    //   .insertAdjacentElement("afterbegin", evt.currentTarget);
     evt.currentTarget.classList.add("pop-up-container");
 
-    // var clone = template.content.cloneNode(true);
-    // document.querySelector("body").appendChild(clone);
-    // document.querySelector(".name").innerText = evt.currentTarget.querySelector(
-    //   "h1"
-    // ).innerText;
-    // document.querySelector(
-    //   ".state"
-    // ).innerText = evt.currentTarget.querySelector("p").innerText;
+    evt.currentTarget.appendChild(document.querySelector(".submit-container"));
 
-    // document.querySelector(".apply").addEventListener("click", closePopUp);
-    // document.querySelector(".close").addEventListener("click", closePopUp);
+    document.querySelector(".submit-container").style = "display:flex";
+
+    evt.currentTarget.appendChild()
+
+
+    document.querySelector(".apply").addEventListener("click", closePopUp);
+    document.querySelector(".close").addEventListener("click", closePopUp);
   });
 });

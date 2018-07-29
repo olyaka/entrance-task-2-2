@@ -123,7 +123,7 @@ header {
 }
 
 .device {
-  transition: transform 2s;
+  transition: transform 1s;
 }
 
 .script,
@@ -284,9 +284,12 @@ footer a:last-child {
 }
 
 .device.pop-up-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
   background: #ffffff;
   position: fixed;
-  border-radius: 20px;
+  border-radius: 10px;
   z-index: 99999;
   transform: scale(3, 3);
   top: calc(50% - 90px);
@@ -294,37 +297,50 @@ footer a:last-child {
 }
 
 .device.pop-up-container h1 {
-  margin-top: 20px;
-  margin-left: 20px;
-  font-size: 27px;
+  margin-left: 10px;
+  top: 11px;
+  font-size: 10px;
   font-family: "Arial-BoldMT", sans-serif;
   color: #333333;
+  position: absolute;
 }
 
 .device.pop-up-container p {
+  position: absolute;
+  top: 22px;
   font-family: "ArialMT", sans-serif;
-  font-size: 14px;
+  font-size: 6px;
   color: #333333;
   margin-top: 5px;
-  margin-left: 20px;
+  margin-left: 10px;
+}
+
+.device.pop-up-container img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  width: 16px;
+  height: 16px;
 }
 
 .submit-container {
-  display: flex;
+  display: none;
   justify-content: space-between;
-  width: 50%;
+  width: 100%;
+  margin-top: 105px;
 }
 
 .submit-container a {
   width: 48%;
-  height: 50px;
-  font-size: 18px;
+  height: 24px;
+  font-size: 8px;
   color: #333333;
   font-family: "Arial-BoldMT", sans-serif;
   text-align: center;
   background: #ffffff;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 7px;
   margin-top: 20px;
   display: flex;
   align-items: center;
