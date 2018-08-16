@@ -53,7 +53,6 @@ var template = document.querySelector("#pop-up-template");
 
 function closePopUp(evt, popInClone, coords) {
   evt.stopPropagation();
-  //debugger
   popInClone.classList.add("close");
   document.querySelector(".overlay").style = "display:none";
   popInClone.remove();
@@ -67,7 +66,6 @@ document.querySelectorAll(".device").forEach(function(item) {
     var submitClone = document
       .querySelector(".submit-container")
       .cloneNode(true);
-    //debugger
     document.querySelector("body").appendChild(popInClone);
     var coords = evt.currentTarget.getBoundingClientRect();
     popInClone.style =
@@ -84,21 +82,30 @@ document.querySelectorAll(".device").forEach(function(item) {
 
     popInClone.appendChild(submitClone);
 
-    popInClone.insertAdjacentHTML(
-      "beforeend",
-      '<img id="oval" src="guide/assets/Oval@1x.svg">'
-    );
-    popInClone.insertAdjacentHTML(
-      "beforeend",
-      '<img id="bg" src="guide/assets/background@1x.svg">'
-    );
+    if (popInClone.classList.contains("temperature")) {
+      popInClone.insertAdjacentHTML(
+        "beforeend",
+        '<img id="oval" src="guide/assets/Oval@1x.svg">'
+      );
+      popInClone.insertAdjacentHTML(
+        "beforeend",
+        '<img id="bg" src="guide/assets/background@1x.svg">'
+      );
 
-    popInClone.insertAdjacentHTML("beforeend", "<span>+23<span>");
-
-    // popInClone.insertAdjacentHTML(
-    //   "beforeend",
-    //   '<img src="guide/assets/Oval Copy@1x.svg">'
-    // );
+      popInClone.insertAdjacentHTML("beforeend", "<span>+23<span>");
+    } else if (popInClone.classList.contains("bulb")) {
+      popInClone.insertAdjacentHTML(
+        "beforeend",
+        '<div class="slider for-bulb"><div class="bar"><div></div></div>'
+      );
+      dragSlider(document.querySelector(".bar"));
+    } else if (popInClone.classList.contains("air")) {
+      popInClone.insertAdjacentHTML(
+        "beforeend",
+        '<div class="slider for-air"><div class="bar"><div></div></div></div>'
+      );
+      dragSlider(document.querySelector(".bar"));
+    }
 
     submitClone.style = "display:flex";
 
@@ -164,3 +171,42 @@ document.querySelectorAll(".device").forEach(function(item) {
     document.querySelector(".menu").style = "display: block";
   });
 });
+
+function dragSlider(element) {
+  element.addEventListener("mousedown", function(evt) {
+    evt.preventDefault();
+
+    var startCoords = {
+      x: evt.clientX
+    };
+
+    var onMouseMove = function(moveEvt) {
+      moveEvt.preventDefault();
+
+      var shift = {
+        x: startCoords.x - moveEvt.clientX
+      };
+
+      startCoords = {
+        x: moveEvt.clientX
+      };
+
+      if (
+        element.offsetLeft - shift.x > -1 &&
+        element.offsetLeft - shift.x < 130
+      ) {
+        element.style.left = element.offsetLeft - shift.x + "px";
+      }
+    };
+
+    var onMouseUp = function(upEvt) {
+      upEvt.preventDefault();
+
+      document.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseup", onMouseUp);
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  });
+}

@@ -410,11 +410,45 @@ footer a:last-child {
   color: #333333;
 }
 
+.slider {
+  border-radius: 35px;
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  margin: auto;
+  left: calc(50% - 75px);
+  top: 50%;
+}
+
+.slider.for-air {
+  background-image: linear-gradient(
+    90deg,
+    #068fff 0%,
+    #ffd800 50%,
+    #f76b1c 100%
+  );
+}
+.slider .bar {
+  border: 1px solid white;
+  position: absolute;
+  border-radius: 1000px;
+  height: 18px;
+  width: 19px;
+}
+.slider .bar > div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1000px;
+  height: 16px;
+  width: 17px;
+  position: absolute;
+}
+.slider.for-bulb {
+  background-image: linear-gradient(90deg, #ffe88c 0%, #ffb100 100%);
+}
 @media screen and (max-width: 479px) and (orientation: portrait) {
   .menu-container ul {
     display: none;
   }
-
   .hamburger {
     display: block;
     width: 20px;
@@ -423,12 +457,10 @@ footer a:last-child {
     top: 25px;
     right: 10px;
   }
-
   .main-bg {
     width: 85vw;
     height: 283px;
   }
-
   .devices-overview {
     flex-direction: row;
     width: auto;
@@ -441,37 +473,29 @@ footer a:last-child {
   .device {
     margin-right: 10px;
   }
-
   .text h1 {
     font-size: 18px;
     margin-bottom: 0px;
   }
-
   .temp h1 {
     margin: 0px;
     font-size: 24px;
   }
-
   .temp {
     margin-top: 90px;
   }
-
   .temp img {
     margin-top: 10px;
   }
-
   .scroll-button {
     display: none;
   }
-
   .main-container {
     flex-direction: column;
   }
-
   .main-content {
     margin-bottom: -50px;
   }
-
   .script-container {
     flex-direction: row;
     overflow-x: scroll;
@@ -480,21 +504,17 @@ footer a:last-child {
     flex-wrap: nowrap;
     width: 100vw !important;
   }
-
   .scripts {
     height: 30vh;
   }
-
   .category:not(:nth-child(2)),
   .nav-arrows,
   footer {
     display: none;
   }
-
   .fav-container {
     margin-left: 30px;
   }
-
   .device.pop-up-container {
     top: calc(50% - 300px) !important;
     left: calc(50% - 160px) !important;
@@ -503,21 +523,17 @@ footer a:last-child {
     height: 450px;
     width: 300px;
   }
-
   .submit-container {
     margin-top: 450px;
     flex-wrap: wrap;
   }
-
   .device.pop-up-container h1 {
     font-size: 18px;
   }
-
   .device.pop-up-container p {
     top: 32px;
     font-size: 12px;
   }
-
   .submit-container a {
     width: 100%;
     margin: auto;
@@ -525,11 +541,9 @@ footer a:last-child {
     margin-top: 20px;
     font-size: 18px;
   }
-
   .device img {
     display: none;
   }
-
   .device #oval {
     display: block;
     top: 130px;
@@ -537,7 +551,6 @@ footer a:last-child {
     height: 210px;
     left: 36px;
   }
-
   .device #bg {
     display: block;
     top: 144px;
@@ -545,13 +558,11 @@ footer a:last-child {
     width: 186px;
     height: 186px;
   }
-
   .device span {
     top: 208px;
     left: 94px;
     font-size: 60px;
   }
-
   .menu {
     right: 0;
     position: absolute;
